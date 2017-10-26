@@ -461,7 +461,7 @@ int lastTag = -1;
 		
 		if (tTag > 0) {
 			if (self.delegate && [self.delegate respondsToSelector:@selector(circleMenu
-											 lightButtonWithIndex:)]) {
+											 lightButtonWithIndex:tTag-TAG_INNER_VIEW_OFFSET-1)]) {
 				[self.delegate circleMenuHighlightButtonWithIndex:tTag-TAG_INNER_VIEW_OFFSET-1];
 			}
 		}
