@@ -460,8 +460,9 @@ int lastTag = -1;
 		tInnerView.backgroundColor = self.innerViewActiveColor;
 		
 		if (tTag > 0) {
-			if (self.delegate && [self.delegate respondsToSelector:@selector(circleMenuHighlightButtonWithIndex:)]) {
-				[self.delegate circleMenuHighlightButtonWithIndex:tTag-TAG_INNER_VIEW_OFFSET];
+			if (self.delegate && [self.delegate respondsToSelector:@selector(circleMenu
+											 lightButtonWithIndex:)]) {
+				[self.delegate circleMenuHighlightButtonWithIndex:tTag-TAG_INNER_VIEW_OFFSET-1];
 			}
 		}
 		
