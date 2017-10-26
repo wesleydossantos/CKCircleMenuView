@@ -461,20 +461,13 @@ int lastTag = -1;
 		
 		if (tTag > 0) {
 			if (self.delegate && [self.delegate respondsToSelector:@selector(circleMenuHighlightButtonWithIndex:)]) {
-				[self.delegate circleMenuHighlightButtonWithIndex:tTag-TAG_INNER_VIEW_OFFSET];
+				[self.delegate circleMenuHighlightButtonWithIndex:tTag-TAG_INNER_VIEW_OFFSET-1];
 			}
 		}
 		
 		
-		
-		//		if (_arrayImageSelected.count > 0){
 		UIButton *btn = [self viewWithTag: (tTag - TAG_INNER_VIEW_OFFSET) + TAG_BUTTON_OFFSET];
 		[btn setSelected:true];
-		//			UIImage *img = _arrayImageSelected[tTag-TAG_INNER_VIEW_OFFSET-1] ;
-		//			[btn imageView].contentMode = UIViewContentModeScaleAspectFit;
-		//			[btn setImage: img forState: UIControlStateNormal];
-		//			lastTag = tTag;
-		//		}
 		
 		if (self.depth) {
 			[self applyActiveDepthToButtonView:tInnerView];
