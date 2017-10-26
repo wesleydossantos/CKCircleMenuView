@@ -26,6 +26,9 @@
  */
 - (void)circleMenuClosed;
 
+
+- (void)circleMenuHighlightButtonWithIndex:(int)anIndex;
+
 @end
 
 // Constants used for the configuration dictionary
@@ -49,10 +52,10 @@ extern NSString* const CIRCLE_MENU_BUTTON_TITLE_VISIBLE;
 extern NSString* const CIRCLE_MENU_BUTTON_TITLE_FONT_SIZE;
 
 typedef enum {
-    CircleMenuDirectionUp = 1,
-    CircleMenuDirectionRight,
-    CircleMenuDirectionDown,
-    CircleMenuDirectionLeft
+	CircleMenuDirectionUp = 1,
+	CircleMenuDirectionRight,
+	CircleMenuDirectionDown,
+	CircleMenuDirectionLeft
 } CircleMenuDirection;
 
 @interface CKCircleMenuView : UIView
@@ -77,8 +80,7 @@ typedef enum {
  *                     currently icon images should be 32x32 points
  *                     (64x64 px for retina)
  */
-- (id)initAtOrigin:(CGPoint)aPoint usingOptions:(NSDictionary*)anOptionsDictionary withImageArray:(NSArray*)anImageArray;
-
+- (id)initAtOrigin:(CGPoint)aPoint usingOptions:(NSDictionary *)anOptionsDictionary withImageArray:(NSArray *)anImageArray selectedArray:(NSArray *)arraySelected;
 /**
  * Initializes the CKCircleMenuView.
  * @param aPoint the center of the menu's circle
@@ -119,3 +121,4 @@ typedef enum {
 @interface CKRoundView : UIView
 
 @end
+
